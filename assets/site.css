@@ -1,0 +1,92 @@
+/* Master Co Group: site institucional. Marca da proposta (29/09/2026):
+   papel branco, tinta marinho, dourado só como acento, serifa do logotipo nos títulos. */
+:root {
+  --paper: #ffffff; --cream: #f6f1e7; --ink: #1c2340; --navy: #2e365b; --soft: #5f6477;
+  --gold: #d9a441; --gold-deep: #9a6f22; --rule: #e6e1d6;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Fragment Mono", ui-monospace, monospace;
+  --wrap: 1080px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+::selection { background: color-mix(in srgb, var(--gold) 35%, transparent); }
+a { color: var(--navy); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--gold-deep); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+/* topo */
+.top { border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.top img { height: 40px; width: auto; display: block; }
+.top nav { display: flex; gap: 28px; font-size: 15px; }
+.top nav a { text-decoration: none; color: var(--navy); }
+.top nav a:hover { color: var(--gold-deep); }
+
+/* títulos */
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: clamp(42px, 6vw, 68px); line-height: 1.04; margin: 0; }
+h2 { font-size: clamp(32px, 4vw, 44px); line-height: 1.1; margin: 0 0 18px; }
+h3 { font-size: 26px; line-height: 1.15; margin: 0 0 8px; }
+p { margin: 0 0 14px; }
+.lead { font-size: 20px; color: var(--navy); max-width: 620px; }
+.muted { color: var(--soft); }
+
+/* hero */
+.hero { padding: 96px 0 88px; }
+.hero h1 em { font-style: italic; color: var(--gold-deep); }
+.hero .lead { margin-top: 22px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 14px 24px; border-radius: 999px;
+  background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; transition: background .2s; }
+.cta:hover { background: var(--navy); color: #fff; }
+.cta.ghost { background: none; color: var(--ink); border: 1px solid var(--ink); }
+.cta.ghost:hover { background: var(--cream); color: var(--ink); }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* seções */
+section.block { padding: 88px 0; border-top: 1px solid var(--rule); }
+section.cream { background: var(--cream); border-top: 0; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 44px; }
+.grid3 .num { font-family: var(--mono); font-size: 13px; color: var(--gold-deep); margin-bottom: 10px; }
+.grid3 p { color: var(--navy); font-size: 16px; }
+.split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+.shot { width: 100%; border-radius: 14px; border: 1px solid var(--rule); box-shadow: 0 24px 60px -30px rgba(28, 35, 64, .45); display: block; }
+.list { list-style: none; padding: 0; margin: 18px 0 0; }
+.list li { padding: 12px 0; border-top: 1px solid var(--rule); }
+.list li:last-child { border-bottom: 1px solid var(--rule); }
+.list b { color: var(--ink); }
+.product-head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.product-head img { width: 56px; height: 56px; border-radius: 14px; }
+.product-head h2 { margin: 0; }
+
+/* contato */
+.contact { background: var(--ink); color: #e8eaf2; }
+.contact h2 { color: #fff; }
+.contact .lead { color: #c9cde0; }
+.contact .cta { background: var(--gold); color: var(--ink); }
+.contact .cta:hover { background: #e7b65a; color: var(--ink); }
+.contact a { color: #fff; }
+
+/* rodapé */
+footer { padding: 28px 0 40px; font-size: 14px; color: var(--soft); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; }
+
+/* texto longo (política) */
+.doc { max-width: 720px; padding: 64px 24px 80px; margin: 0 auto; }
+.doc h1 { font-size: clamp(36px, 5vw, 50px); }
+.doc h2 { font-size: 28px; margin: 40px 0 10px; }
+.doc li { margin-bottom: 8px; }
+.doc hr { border: 0; border-top: 1px solid var(--rule); margin: 56px 0; }
+
+@media (max-width: 860px) {
+  .top nav { gap: 18px; font-size: 14px; }
+  .hero { padding: 64px 0 56px; }
+  .grid3, .split { grid-template-columns: 1fr; gap: 32px; }
+  section.block { padding: 64px 0; }
+}
+@media (max-width: 520px) {
+  .top nav a.hide-sm { display: none; }
+  .top img { height: 32px; }
+}
