@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Abrir sua empresa nos EUA · Master Co Group</title>
+<meta name="description" content="Formulário de abertura de LLC na Flórida, Master Co Group.">
+<link rel="icon" href="/assets/aiputs-128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Archivo:wght@400;500;600;700&family=Fragment+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  :root { --field: #fff; --card: #ffffff; --bg: #f6f1e7; --err: #b3261e; --ok: #1e7a46; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --paper: #12162a; --cream: #181d35; --ink: #eef0f7; --navy: #c9cee6; --soft: #9aa0b8; --rule: #2c3354;
+    --field: #0f1326; --card: #171c33; --bg: #0d1022; --gold-deep: #e0b25a; --err: #ff8a80; --ok: #6fd39a; } }
+  :root[data-theme="dark"] { --paper: #12162a; --cream: #181d35; --ink: #eef0f7; --navy: #c9cee6; --soft: #9aa0b8; --rule: #2c3354;
+    --field: #0f1326; --card: #171c33; --bg: #0d1022; --gold-deep: #e0b25a; --err: #ff8a80; --ok: #6fd39a; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .top img { filter: brightness(0) invert(1); } }
+  :root[data-theme="dark"] .top img { filter: brightness(0) invert(1); }
+  body { background: var(--bg); color: var(--ink); }
+  .top { background: var(--paper); }
+  .theme { background: none; border: 1px solid var(--rule); color: var(--navy); border-radius: 999px; width: 38px; height: 38px; cursor: pointer; font-size: 16px; }
+  .intro { padding: 48px 0 8px; }
+  .intro h1 { font-size: clamp(34px, 5vw, 52px); }
+  .intro p { color: var(--navy); max-width: 640px; margin-top: 14px; }
+  form { padding: 16px 0 80px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 26px 24px; margin: 18px 0; }
+  .card h2 { font-size: 30px; margin-bottom: 6px; }
+  .card .hint { color: var(--soft); font-size: 15px; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .grid .full { grid-column: 1 / -1; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .card { padding: 20px 16px; } }
+  label { display: block; font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  label small { font-weight: 400; color: var(--soft); }
+  input, select, textarea { width: 100%; font: 16px/1.4 var(--sans); color: var(--ink); background: var(--field);
+    border: 1px solid var(--rule); border-radius: 10px; padding: 12px 13px; }
+  textarea { min-height: 90px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .choice { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border: 1px solid var(--rule); border-radius: 12px; margin-bottom: 10px; cursor: pointer; }
+  .choice input { width: auto; margin-top: 4px; }
+  .choice span { font-size: 15px; }
+  .choice b { display: block; color: var(--ink); }
+  .partner { border-top: 1px dashed var(--rule); padding-top: 18px; margin-top: 18px; }
+  .partner:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+  .partner h3 { display: flex; justify-content: space-between; align-items: center; }
+  .rm { background: none; border: 0; color: var(--err); font: 14px var(--sans); cursor: pointer; }
+  .add { background: none; border: 1px dashed var(--navy); color: var(--navy); border-radius: 12px; padding: 12px; width: 100%; font: 600 15px var(--sans); cursor: pointer; margin-top: 18px; }
+  .photo-prev { margin-top: 10px; max-width: 220px; border-radius: 8px; display: none; border: 1px solid var(--rule); }
+  .sum { font: 14px var(--mono); margin-top: 14px; }
+  .sum.bad { color: var(--err); } .sum.good { color: var(--ok); }
+  .send { margin-top: 8px; width: 100%; justify-content: center; border: 0; cursor: pointer; font-family: var(--sans); }
+  .send[disabled] { opacity: .55; cursor: wait; }
+  .msg { margin-top: 14px; font-weight: 600; }
+  .msg.err { color: var(--err); } .msg.ok { color: var(--ok); }
+  .hp { position: absolute; left: -5000px; }
+  .done { text-align: center; padding: 60px 20px; }
+  .done h2 { font-size: 40px; }
+  .lock { font-size: 14px; color: var(--soft); margin-top: 10px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="/" aria-label="Master Co Group, início"><img src="/assets/logo.png" alt="Master Co Group"></a>
+    <button class="theme" id="theme" type="button" aria-label="Trocar tema claro ou escuro">☾</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro" id="intro">
+    <h1>Vamos abrir sua empresa nos EUA</h1>
+    <p>Com essas informações a gente registra sua LLC na Flórida e pede o EIN (o “CNPJ” americano). Leva uns 10 minutos. Tenha em mãos o passaporte de cada sócio.</p>
+  </section>
+
+  <form id="f" novalidate>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="card">
+      <h2>1. A empresa</h2>
+      <p class="hint">Dê até 3 opções de nome, em ordem de preferência. Se o primeiro já existir na Flórida, usamos o próximo. “LLC” entra no final automaticamente.</p>
+      <div class="grid">
+        <div class="full"><label for="n1">Nome, 1ª opção</label><input id="n1" maxlength="80" placeholder="Ex.: Nasser Holdings"></div>
+        <div><label for="n2">2ª opção <small>(opcional)</small></label><input id="n2" maxlength="80"></div>
+        <div><label for="n3">3ª opção <small>(opcional)</small></label><input id="n3" maxlength="80"></div>
+        <div class="full"><label for="act">O que a empresa vai fazer</label><input id="act" maxlength="200" value="Investimento imobiliário (compra e aluguel de imóveis)"></div>
+      </div>
+      <div style="margin-top:18px">
+        <label>Quem administra a empresa</label>
+        <label class="choice"><input type="radio" name="mgmt" value="membros" checked><span><b>Todos os sócios juntos</b>É o mais comum para sócios que também são donos.</span></label>
+        <label class="choice"><input type="radio" name="mgmt" value="gerente"><span><b>Um sócio como gerente</b>Só um sócio assina e decide pelo dia a dia.</span></label>
+      </div>
+      <div style="margin-top:8px">
+        <label>Endereço da empresa nos EUA</label>
+        <label class="choice"><input type="radio" name="addr" value="mastercore" checked><span><b>Usar o endereço da Master Co</b>Recomendado se vocês ainda não moram aqui.</span></label>
+        <label class="choice"><input type="radio" name="addr" value="proprio"><span><b>Tenho um endereço nos EUA</b></span></label>
+        <input id="usaddr" maxlength="200" placeholder="Rua, número, cidade, estado, ZIP" style="display:none;margin-top:6px">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Os sócios</h2>
+      <p class="hint">Preencha igual está no passaporte. As porcentagens precisam somar 100%.</p>
+      <div id="partners"></div>
+      <button type="button" class="add" id="add">+ Adicionar outro sócio</button>
+      <div class="sum" id="sum"></div>
+      <div style="margin-top:18px">
+        <label for="resp">Quem fica como responsável perante a Receita americana (IRS) <small>(um sócio)</small></label>
+        <select id="resp"></select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Para finalizar</h2>
+      <label for="notes">Alguma observação? <small>(opcional)</small></label>
+      <textarea id="notes" maxlength="1000"></textarea>
+      <label class="choice" style="margin-top:16px"><input type="checkbox" id="consent"><span>Confirmo que os dados estão corretos e autorizo a Master Co Group a usá-los somente para registrar a empresa, pedir o EIN e abrir a conta bancária dela.</span></label>
+      <button class="cta send" id="send" type="submit">Enviar</button>
+      <div class="msg" id="msg" role="status" aria-live="polite"></div>
+      <p class="lock">🔒 Envio criptografado. As fotos dos passaportes ficam no nosso servidor, não em e-mail ou WhatsApp.</p>
+    </div>
+  </form>
+</main>
+
+<template id="tpl">
+  <div class="partner">
+    <h3><span>Sócio <span class="num"></span></span><button type="button" class="rm">Remover</button></h3>
+    <div class="grid">
+      <div class="full"><label>Nome completo <small>(igual ao passaporte)</small></label><input data-k="name" maxlength="120" autocomplete="name"></div>
+      <div><label>Data de nascimento</label><input data-k="birth" type="date"></div>
+      <div><label>Nacionalidade</label><input data-k="nationality" maxlength="60" value="Brasileira"></div>
+      <div><label>Número do passaporte</label><input data-k="passport" maxlength="30" autocapitalize="characters"></div>
+      <div><label>Validade do passaporte</label><input data-k="passport_exp" type="date"></div>
+      <div><label>CPF <small>(opcional)</small></label><input data-k="cpf" maxlength="20" inputmode="numeric"></div>
+      <div><label>Porcentagem na empresa</label><input data-k="percent" type="number" min="1" max="100" step="0.01" inputmode="decimal" placeholder="50"></div>
+      <div class="full"><label>Endereço residencial <small>(rua, número, complemento, bairro)</small></label><input data-k="address" maxlength="160" autocomplete="street-address"></div>
+      <div><label>Cidade</label><input data-k="city" maxlength="80"></div>
+      <div><label>Estado</label><input data-k="state" maxlength="40"></div>
+      <div><label>CEP</label><input data-k="zip" maxlength="20" inputmode="numeric"></div>
+      <div><label>País</label><input data-k="country" maxlength="60" value="Brasil"></div>
+      <div><label>E-mail</label><input data-k="email" type="email" maxlength="120" autocomplete="email"></div>
+      <div><label>WhatsApp <small>(com +55 e DDD)</small></label><input data-k="phone" type="tel" maxlength="30" placeholder="+55 11 9...." autocomplete="tel"></div>
+      <div class="full"><label>Foto da página de dados do passaporte <small>(a página com a foto, nítida e sem reflexo)</small></label>
+        <input data-k="photo" type="file" accept="image/*"><img class="photo-prev" alt="Prévia do passaporte"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+(() => {
+  const API = "https://sign.ellitestay.com/api/intake/llc";
+  const $ = s => document.querySelector(s);
+  const root = document.documentElement, tb = $("#theme");
+  const setTheme = t => { if (t) root.dataset.theme = t; else delete root.dataset.theme;
+    const dark = t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; tb.textContent = dark ? "☀" : "☾"; };
+  let saved = null; try { saved = localStorage.getItem("mc-theme"); } catch (e) {}
+  setTheme(saved);
+  tb.onclick = () => { const dark = tb.textContent === "☾"; const t = dark ? "dark" : "light"; setTheme(t); try { localStorage.setItem("mc-theme", t); } catch (e) {} };
+
+  const box = $("#partners"), tpl = $("#tpl"), photos = new WeakMap();
+  const renumber = () => {
+    const ps = [...box.querySelectorAll(".partner")];
+    ps.forEach((p, i) => { p.querySelector(".num").textContent = i + 1; p.querySelector(".rm").style.display = ps.length > 1 ? "" : "none"; });
+    const r = $("#resp"), cur = r.value;
+    r.innerHTML = ""; ps.forEach((p, i) => { const o = document.createElement("option"); o.value = i + 1;
+      o.textContent = (p.querySelector('[data-k="name"]').value || "Sócio " + (i + 1)); r.appendChild(o); });
+    if (cur && cur <= ps.length) r.value = cur;
+    $("#add").style.display = ps.length >= 4 ? "none" : "";
+    sum();
+  };
+  const sum = () => {
+    const t = [...box.querySelectorAll('[data-k="percent"]')].reduce((a, i) => a + (parseFloat(i.value.replace(",", ".")) || 0), 0);
+    const s = $("#sum"); s.textContent = "Total: " + (Math.round(t * 100) / 100) + "%";
+    s.className = "sum " + (Math.abs(t - 100) < 0.5 ? "good" : "bad");
+  };
+  const shrink = file => new Promise((res, rej) => {
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => { const m = 1600, k = Math.min(1, m / Math.max(img.width, img.height));
+      const c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+      let q = 0.82, d = c.toDataURL("image/jpeg", q); while (d.length > 900000 && q > 0.4) { q -= 0.1; d = c.toDataURL("image/jpeg", q); }
+      res(d); };
+    img.onerror = () => rej(new Error("img")); img.src = url;
+  });
+  const addPartner = () => {
+    const n = tpl.content.firstElementChild.cloneNode(true);
+    n.querySelector(".rm").onclick = () => { n.remove(); renumber(); };
+    n.querySelector('[data-k="name"]').addEventListener("input", renumber);
+    n.querySelector('[data-k="percent"]').addEventListener("input", sum);
+    const f = n.querySelector('[data-k="photo"]'), prev = n.querySelector(".photo-prev");
+    f.onchange = async () => { if (!f.files[0]) return;
+      try { const d = await shrink(f.files[0]); photos.set(n, d); prev.src = d; prev.style.display = "block"; }
+      catch (e) { photos.delete(n); prev.style.display = "none"; alert("Não consegui ler essa imagem. Tente uma foto JPG ou PNG."); } };
+    box.appendChild(n); renumber();
+  };
+  addPartner(); addPartner();
+  $("#add").onclick = addPartner;
+  document.querySelectorAll('input[name="addr"]').forEach(r => r.onchange = () => { $("#usaddr").style.display = $('input[name="addr"]:checked').value === "proprio" ? "" : "none"; });
+
+  $("#f").onsubmit = async e => {
+    e.preventDefault();
+    const msg = $("#msg"), btn = $("#send");
+    const partners = [...box.querySelectorAll(".partner")].map(p => {
+      const o = {}; p.querySelectorAll("[data-k]").forEach(i => { if (i.dataset.k !== "photo") o[i.dataset.k] = i.value.trim(); });
+      o.photo = photos.get(p) || ""; return o; });
+    const body = { names: ["#n1", "#n2", "#n3"].map(s => $(s).value.trim()), activity: $("#act").value.trim(),
+      management: $('input[name="mgmt"]:checked').value, address_mode: $('input[name="addr"]:checked').value,
+      us_address: $("#usaddr").value.trim(), partners, responsible: $("#resp").value,
+      notes: $("#notes").value.trim(), consent: $("#consent").checked, website: document.querySelector(".hp").value,
+      test: new URLSearchParams(location.search).has("teste") };
+    msg.className = "msg"; msg.textContent = "Enviando…"; btn.disabled = true;
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.ok) {
+        $("#f").innerHTML = '<div class="card done"><h2>Recebido! 🙌</h2><p>Obrigado. A gente confere tudo e já começa o registro da empresa. Qualquer dúvida, a gente fala pelo WhatsApp.</p><p class="lock">Protocolo: ' + j.id + "</p></div>";
+        $("#intro").style.display = "none"; scrollTo(0, 0);
+      } else { msg.className = "msg err"; msg.textContent = j.error || "Não consegui enviar. Tente de novo."; }
+    } catch (err) { msg.className = "msg err"; msg.textContent = "Sem conexão com o servidor. Confira a internet e tente de novo."; }
+    btn.disabled = false;
+  };
+})();
+</script>
+</body>
+</html>
