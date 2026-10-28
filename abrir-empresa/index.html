@@ -150,6 +150,7 @@
 <script>
 (() => {
   const API = "https://sign.ellitestay.com/api/intake/llc";
+  const PAY = "https://buy.stripe.com/bJe6oI2vO6Psai81Gm8IU00";
   const $ = s => document.querySelector(s);
   const root = document.documentElement, tb = $("#theme");
   const setTheme = t => { if (t) root.dataset.theme = t; else delete root.dataset.theme;
@@ -214,7 +215,10 @@
       const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.ok) {
-        $("#f").innerHTML = '<div class="card done"><h2>Recebido! 🙌</h2><p>Obrigado. A gente confere tudo e já começa o registro da empresa. Qualquer dúvida, a gente fala pelo WhatsApp.</p><p class="lock">Protocolo: ' + j.id + "</p></div>";
+        const pay = PAY + "?client_reference_id=" + encodeURIComponent(j.id) + "&prefilled_email=" + encodeURIComponent(partners[0].email || "");
+        $("#f").innerHTML = '<div class="card done"><h2>Recebido! 🙌</h2><p>Obrigado. Último passo: a taxa de abertura da empresa, <b>US$ 550</b>, por cartão de crédito.</p>' +
+          '<a class="cta send" style="max-width:360px;margin:18px auto 0" href="' + pay + '">Pagar com cartão</a>' +
+          '<p class="lock">Pagamento seguro pelo Stripe. Protocolo: ' + j.id + "</p></div>";
         $("#intro").style.display = "none"; scrollTo(0, 0);
       } else { msg.className = "msg err"; msg.textContent = j.error || "Não consegui enviar. Tente de novo."; }
     } catch (err) { msg.className = "msg err"; msg.textContent = "Sem conexão com o servidor. Confira a internet e tente de novo."; }
