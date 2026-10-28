@@ -47,7 +47,7 @@
   .partner h3 { display: flex; justify-content: space-between; align-items: center; }
   .rm { background: none; border: 0; color: var(--err); font: 14px var(--sans); cursor: pointer; }
   .add { background: none; border: 1px dashed var(--navy); color: var(--navy); border-radius: 12px; padding: 12px; width: 100%; font: 600 15px var(--sans); cursor: pointer; margin-top: 18px; }
-  .photo-prev { margin-top: 10px; max-width: 220px; border-radius: 8px; display: none; border: 1px solid var(--rule); }
+  .photo-prev { margin-top: 10px; max-width: 220px; border-radius: 8px; display: block; border: 1px solid var(--rule); }
   .sum { font: 14px var(--mono); margin-top: 14px; }
   .sum.bad { color: var(--err); } .sum.good { color: var(--ok); }
   .send { margin-top: 8px; width: 100%; justify-content: center; border: 0; cursor: pointer; font-family: var(--sans); }
@@ -143,7 +143,7 @@
       <div><label>E-mail</label><input data-k="email" type="email" maxlength="120" autocomplete="email"></div>
       <div><label>WhatsApp <small>(com +55 e DDD)</small></label><input data-k="phone" type="tel" maxlength="30" placeholder="+55 11 9...." autocomplete="tel"></div>
       <div class="full"><label>Foto da página de dados do passaporte <small>(a página com a foto, nítida e sem reflexo)</small></label>
-        <input data-k="photo" type="file" accept="image/*"><img class="photo-prev" alt="Prévia do passaporte"></div>
+        <input data-k="photo" type="file" accept="image/*"><div class="photo-slot"></div></div>
     </div>
   </div>
 </template>
@@ -190,10 +190,11 @@
     n.querySelector(".rm").onclick = () => { n.remove(); renumber(); };
     n.querySelector('[data-k="name"]').addEventListener("input", renumber);
     n.querySelector('[data-k="percent"]').addEventListener("input", sum);
-    const f = n.querySelector('[data-k="photo"]'), prev = n.querySelector(".photo-prev");
+    const f = n.querySelector('[data-k="photo"]'), slot = n.querySelector(".photo-slot");
     f.onchange = async () => { if (!f.files[0]) return;
-      try { const d = await shrink(f.files[0]); photos.set(n, d); prev.src = d; prev.style.display = "block"; }
-      catch (e) { photos.delete(n); prev.style.display = "none"; alert("Não consegui ler essa imagem. Tente uma foto JPG ou PNG."); } };
+      try { const d = await shrink(f.files[0]); photos.set(n, d);
+        const img = new Image(); img.className = "photo-prev"; img.alt = "Prévia do passaporte"; img.src = d; slot.replaceChildren(img); }
+      catch (e) { photos.delete(n); slot.replaceChildren(); alert("Não consegui ler essa imagem. Tente uma foto JPG ou PNG."); } };
     box.appendChild(n); renumber();
   };
   addPartner(); addPartner();
