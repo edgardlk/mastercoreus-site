@@ -1,0 +1,5 @@
+Contact: mailto:trust@mastercoreus.com
+Expires: 2027-11-10T00:00:00.000Z
+Preferred-Languages: en, pt
+Canonical: https://mastercoreus.com/.well-known/security.txt
+Policy: https://mastercoreus.com/security/

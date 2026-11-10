@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security & Data Practices · Master Core Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+ --ink:#1c2340;--soft:#5b6178;--rule:#e4e1d8;--paper:#ffffff;--card:#faf8f3;
+ --gold:#d9a441;--gold-deep:#b8862c;--gold-soft:#fbf5e6;
+ --sans:"Archivo",system-ui,sans-serif;--serif:"Cormorant Garamond",Georgia,serif;--mono:"Fragment Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --ink:#eef0f7;--soft:#a9aec2;--rule:#2c3354;--paper:#11152a;--card:#181d36;--gold-soft:#2a2615;--gold-deep:#e2b55e}}
+:root[data-theme="dark"]{--ink:#eef0f7;--soft:#a9aec2;--rule:#2c3354;--paper:#11152a;--card:#181d36;--gold-soft:#2a2615;--gold-deep:#e2b55e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.doc{max-width:860px;margin:0 auto;padding:34px 24px 40px}
+.band{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:14px;margin-bottom:30px;border-bottom:1px solid var(--gold)}
+.band img{height:54px;border-radius:6px}
+:root[data-theme="dark"] .band img{background:#fff;padding:4px 8px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .band img{background:#fff;padding:4px 8px}}
+.band .r{text-align:right;font-family:var(--mono);font-size:10.5px;color:var(--soft);letter-spacing:.06em;text-transform:uppercase;line-height:1.7}
+.tools{display:flex;gap:6px;justify-content:flex-end;margin-bottom:6px}
+.tools button{font-family:var(--mono);font-size:11px;letter-spacing:.06em;background:transparent;color:var(--soft);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;cursor:pointer}
+.tools button[aria-pressed="true"]{color:var(--ink);border-color:var(--gold)}
+h1{font-family:var(--serif);font-size:46px;line-height:1.02;letter-spacing:-.01em;font-weight:600;margin-bottom:12px}
+h1 em{font-style:italic;color:var(--gold);font-weight:500}
+.lede{color:var(--soft);font-size:16.5px;max-width:64ch;margin-bottom:28px}
+.lede b{color:var(--ink);font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:18px 20px}
+.card h2{font-family:var(--serif);font-size:23px;font-weight:600;line-height:1.15;margin-bottom:8px}
+.card .k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--ink)}
+.card p+p{margin-top:6px}
+.card.wide{grid-column:1/-1}
+.pull{background:var(--gold-soft);border-left:3px solid var(--gold);padding:14px 18px;margin:26px 0 0;font-size:15.5px;line-height:1.45}
+.pull b{font-weight:600}
+.pull a{color:var(--gold-deep);font-weight:600}
+.endnote{margin-top:30px;padding-top:10px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--soft);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ver{position:fixed;right:12px;bottom:10px;font-family:var(--mono);font-size:10.5px;color:var(--gold-deep);background:var(--paper);border:1px solid var(--gold);border-radius:999px;padding:2px 8px}
+[data-lang-pt]{display:none}
+html[lang="pt-BR"] [data-lang-en]{display:none}
+html[lang="pt-BR"] [data-lang-pt]{display:revert}
+@media screen and (max-width:640px){
+ .grid{grid-template-columns:1fr}
+ h1{font-size:36px}
+ .band{flex-direction:column;align-items:flex-start}
+ .band .r{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="doc">
+ <div class="tools">
+  <button type="button" id="b-en" aria-pressed="true">EN</button>
+  <button type="button" id="b-pt" aria-pressed="false">PT</button>
+  <button type="button" id="b-theme" title="Light / dark">☀/☾</button>
+ </div>
+ <header class="band">
+  <img src="assets/masterco-logo-navy-gold.png" alt="Master Co">
+  <div class="r">Master Core Group LLC<br>edgard@mastercoreus.com<br>mastercoreus.com</div>
+ </header>
+
+ <h1 data-lang-en>Security &amp; <em>data practices</em></h1>
+ <h1 data-lang-pt>Segurança e <em>cuidado com seus dados</em></h1>
+ <p class="lede" data-lang-en>We build AI systems that run inside your business. Here is, in plain words, how we handle your data. <b>Every point below is a commitment in our standard written agreement</b>, not a marketing promise.</p>
+ <p class="lede" data-lang-pt>Construímos sistemas de IA que rodam dentro do seu negócio. Aqui está, em palavras simples, como tratamos os seus dados. <b>Cada ponto abaixo é um compromisso do nosso contrato padrão</b>, não promessa de marketing.</p>
+
+ <div class="grid">
+  <section class="card">
+   <span class="k">01 · Ownership</span>
+   <h2 data-lang-en>Your data and accounts stay yours</h2>
+   <h2 data-lang-pt>Seus dados e suas contas continuam seus</h2>
+   <p data-lang-en>Once your system goes live, the accounts it depends on (server, AI, messaging, email and domain) are created in your company's name, with you as owner. If we ever part ways, you receive the administrator credentials and a full export of your data within 10 days.</p>
+   <p data-lang-pt>Quando o sistema entra no ar, as contas de que ele depende (servidor, IA, mensagens, e-mail e domínio) ficam no nome da sua empresa, com você como dono. Se um dia encerrarmos, você recebe as credenciais de administrador e a exportação completa dos seus dados em até 10 dias.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">02 · Separation</span>
+   <h2 data-lang-en>Never shared, never used to train AI</h2>
+   <h2 data-lang-pt>Nunca compartilhado, nunca usado pra treinar IA</h2>
+   <p data-lang-en>Your data is used only to run your system and only on your instructions. It is never used for other clients or to train general-purpose AI models. Each client's information is kept in its own separate space, apart from our internal tools.</p>
+   <p data-lang-pt>Seus dados são usados só pra operar o seu sistema e só conforme as suas instruções. Nunca servem a outro cliente nem treinam modelos de IA de uso geral. A informação de cada cliente fica num espaço próprio, separado das nossas ferramentas internas.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">03 · Development</span>
+   <h2 data-lang-en>Built and tested without your data</h2>
+   <h2 data-lang-pt>Construído e testado sem os seus dados</h2>
+   <p data-lang-en>We build and test in our own environment, without your operational data, until your system is ready to go live.</p>
+   <p data-lang-pt>Construímos e testamos no nosso próprio ambiente, sem os seus dados de operação, até o sistema estar pronto pra entrar no ar.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">04 · Human control</span>
+   <h2 data-lang-en>AI recommends, your team decides</h2>
+   <h2 data-lang-pt>A IA sugere, a sua equipe decide</h2>
+   <p data-lang-en>Important actions wait for approval from the person you designate. When something is ambiguous, the system asks instead of guessing.</p>
+   <p data-lang-pt>Ações importantes esperam a aprovação de quem você indicar. Quando algo está ambíguo, o sistema pergunta em vez de adivinhar.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">05 · Credentials</span>
+   <h2 data-lang-en>Keys stay locked on your server</h2>
+   <h2 data-lang-pt>Chaves ficam trancadas no seu servidor</h2>
+   <p data-lang-en>Passwords and API keys live only in the protected configuration of the server that runs your system. They are never written into documents, chats or shared notes.</p>
+   <p data-lang-pt>Senhas e chaves de API ficam só na configuração protegida do servidor que roda o seu sistema. Nunca vão pra documento, conversa ou anotação compartilhada.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">06 · Backup</span>
+   <h2 data-lang-en>Daily backup, in your account</h2>
+   <h2 data-lang-pt>Backup diário, na sua conta</h2>
+   <p data-lang-en>Your system's database is backed up automatically every day to your own account, and the restore procedure is written down for you.</p>
+   <p data-lang-pt>O banco de dados do seu sistema tem backup automático todo dia na sua própria conta, e o passo a passo pra restaurar fica documentado pra você.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">07 · Incidents</span>
+   <h2 data-lang-en>You hear from us, fast</h2>
+   <h2 data-lang-pt>Você fica sabendo, rápido</h2>
+   <p data-lang-en>If we confirm a security incident affecting your data, we notify you within 10 days.</p>
+   <p data-lang-pt>Se confirmarmos um incidente de segurança que afete os seus dados, avisamos você em até 10 dias.</p>
+  </section>
+
+  <section class="card">
+   <span class="k">08 · Deletion</span>
+   <h2 data-lang-en>Deleted when you ask</h2>
+   <h2 data-lang-pt>Apagado quando você pede</h2>
+   <p data-lang-en>When our work ends, we delete any copies we hold within 30 days of your request. Routine backups stay protected and rotate out within 30 days.</p>
+   <p data-lang-pt>Quando o trabalho termina, apagamos as cópias que tivermos em até 30 dias depois do seu pedido. Backups de rotina continuam protegidos e saem do rodízio em até 30 dias.</p>
+  </section>
+
+  <section class="card wide">
+   <span class="k">09 · Confidentiality &amp; providers</span>
+   <h2 data-lang-en>NDA by default, established providers only</h2>
+   <h2 data-lang-pt>NDA desde o início, só fornecedores consolidados</h2>
+   <p data-lang-en>A mutual non-disclosure agreement is part of our standard contract. Your system runs on established cloud, AI and messaging platforms under their standard business terms.</p>
+   <p data-lang-pt>Um acordo de confidencialidade mútuo faz parte do nosso contrato padrão. O seu sistema roda em plataformas consolidadas de nuvem, IA e mensagens, nos termos comerciais padrão delas.</p>
+  </section>
+ </div>
+
+ <p class="pull" data-lang-en><b>Have a security questionnaire from your team or insurer?</b> We answer it in writing. Write to <a href="mailto:trust@mastercoreus.com">trust@mastercoreus.com</a>.</p>
+ <p class="pull" data-lang-pt><b>A sua equipe ou a seguradora mandou um questionário de segurança?</b> Respondemos por escrito. Escreva pra <a href="mailto:trust@mastercoreus.com">trust@mastercoreus.com</a>.</p>
+
+ <div class="endnote">
+  <span>Master Core Group LLC · Edgard Klemm · edgard@mastercoreus.com</span>
+  <span data-lang-en>Summary of our standard agreement. The signed contract governs.</span>
+  <span data-lang-pt>Resumo do nosso contrato padrão. Vale o contrato assinado.</span>
+ </div>
+</div>
+<span class="ver">v1.1</span>
+<script>
+(function(){
+ var root=document.documentElement,en=document.getElementById('b-en'),pt=document.getElementById('b-pt'),th=document.getElementById('b-theme');
+ function lang(l){root.setAttribute('lang',l);en.setAttribute('aria-pressed',l==='en');pt.setAttribute('aria-pressed',l!=='en');try{localStorage.setItem('mc-sec-lang',l)}catch(e){}}
+ en.onclick=function(){lang('en')};pt.onclick=function(){lang('pt-BR')};
+ th.onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);var t=dark?'light':'dark';root.setAttribute('data-theme',t);try{localStorage.setItem('mc-sec-theme',t)}catch(e){}};
+ try{var l=localStorage.getItem('mc-sec-lang');if(l)lang(l);var t=localStorage.getItem('mc-sec-theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
+})();
+</script>
+</body>
+</html>
