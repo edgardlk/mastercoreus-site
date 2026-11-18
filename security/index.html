@@ -37,6 +37,8 @@ h1 em{font-style:italic;color:var(--gold);font-weight:500}
 .card p{font-size:14.5px;color:var(--ink)}
 .card p+p{margin-top:6px}
 .card.wide{grid-column:1/-1}
+.verified{margin-top:16px;border-color:var(--gold)}
+.card p.fine{font-size:12.5px;color:var(--soft);margin-top:8px}
 .pull{background:var(--gold-soft);border-left:3px solid var(--gold);padding:14px 18px;margin:26px 0 0;font-size:15.5px;line-height:1.45}
 .pull b{font-weight:600}
 .pull a{color:var(--gold-deep);font-weight:600}
@@ -144,6 +146,16 @@ html[lang="pt-BR"] [data-lang-pt]{display:revert}
   </section>
  </div>
 
+ <section class="card wide verified">
+  <span class="k">Verified access</span>
+  <h2 data-lang-en>Approved for defensive security work</h2>
+  <h2 data-lang-pt>Aprovados para trabalho de defesa digital</h2>
+  <p data-lang-en>Master Core is approved under Anthropic's Cyber Verification Program. Anthropic, the company behind Claude, checks who gets this access and gives verified teams expanded use of its most advanced models for defensive security work. It lets us review the systems we build for you with the same tools verified security teams use.</p>
+  <p data-lang-pt>A Master Core foi aprovada no Cyber Verification Program da Anthropic. A Anthropic, empresa que criou o Claude, confere quem recebe esse acesso e libera às equipes verificadas o uso ampliado dos seus modelos mais avançados para trabalho de defesa digital. Com isso revisamos os sistemas que construímos pra você com as mesmas ferramentas que equipes de segurança verificadas usam.</p>
+  <p class="fine" data-lang-en>An access verification by Anthropic, not a certification or endorsement of our services.</p>
+  <p class="fine" data-lang-pt>Verificação de acesso feita pela Anthropic, não é certificação nem aval dos nossos serviços.</p>
+ </section>
+
  <p class="pull" data-lang-en><b>Have a security questionnaire from your team or insurer?</b> We answer it in writing. Write to <a href="mailto:trust@mastercoreus.com">trust@mastercoreus.com</a>.</p>
  <p class="pull" data-lang-pt><b>A sua equipe ou a seguradora mandou um questionário de segurança?</b> Respondemos por escrito. Escreva pra <a href="mailto:trust@mastercoreus.com">trust@mastercoreus.com</a>.</p>
 
@@ -153,7 +165,7 @@ html[lang="pt-BR"] [data-lang-pt]{display:revert}
   <span data-lang-pt>Resumo do nosso contrato padrão. Vale o contrato assinado.</span>
  </div>
 </div>
-<span class="ver">v1.1</span>
+<span class="ver">v1.2</span>
 <script>
 (function(){
  var root=document.documentElement,en=document.getElementById('b-en'),pt=document.getElementById('b-pt'),th=document.getElementById('b-theme');
